@@ -20,23 +20,63 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta name="description" content="Activiti7一、工作流介绍1.1 概念工作流(Workflow)，就是通过计算机对业务流程自动化执行管理。它主要解决的是“使在多个参与者之间按照某种预定义的规则自动进行传递文档、信息或任务的过程，从而实现某个预期的业务目标，或者促使此目标的实现”。 1.2 工作流系统一个软件系统中具有工作流的功能，我们把它称为工作流系统，一个系统中工作流的功能是什么？就是对系统的业务流程进行自动化管理，所以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试">
+<meta property="og:url" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Activiti7一、工作流介绍1.1 概念工作流(Workflow)，就是通过计算机对业务流程自动化执行管理。它主要解决的是“使在多个参与者之间按照某种预定义的规则自动进行传递文档、信息或任务的过程，从而实现某个预期的业务目标，或者促使此目标的实现”。 1.2 工作流系统一个软件系统中具有工作流的功能，我们把它称为工作流系统，一个系统中工作流的功能是什么？就是对系统的业务流程进行自动化管理，所以">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/clip_image002-1573894539698.jpg">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/clip_image002-1573894569746.jpg">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/clip_image002-1573894913998.jpg">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/clip_image002-1573894954565.jpg">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/clip_image002-1573894978125.jpg">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1574856677.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1574856972.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1574857172.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1572852095.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1572852222.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/clip_image002.jpg">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1574522151044.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1574562726375.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1574563600305.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1574563937457.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575106985823.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575107231004.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575107336431.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575107648105.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575115474865.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575121491752.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575108966935.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575107648105.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575109268443.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575109366989.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575112075626.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575109627745.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/clip_image002.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575113551947.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575113951966.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575114245068.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575116732147.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575116797665.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575116832196.png">
+<meta property="og:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/1575117588624.png">
+<meta property="article:published_time" content="2021-08-18T06:56:48.000Z">
+<meta property="article:modified_time" content="2021-08-18T07:03:18.660Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/assets/clip_image002-1573894539698.jpg">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/","path":"2021/08/18/测试/","title":"测试"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo</title>
+<title>测试 | Hexo</title>
   
 
 
@@ -90,7 +130,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -103,6 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Activiti7"><span class="nav-number">1.</span> <span class="nav-text">Activiti7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">一、工作流介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 工作流系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E9%80%82%E7%94%A8%E8%A1%8C%E4%B8%9A"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 适用行业</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%85%B7%E4%BD%93%E5%BA%94%E7%94%A8"><span class="nav-number">2.4.</span> <span class="nav-text">1.4 具体应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">2.5.</span> <span class="nav-text">1.5 实现方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Activiti7%E6%A6%82%E8%BF%B0"><span class="nav-number">3.</span> <span class="nav-text">二、Activiti7概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-BPM"><span class="nav-number">3.1.1.</span> <span class="nav-text">2.1.1 BPM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-BPM%E8%BD%AF%E4%BB%B6"><span class="nav-number">3.1.2.</span> <span class="nav-text">2.1.2 BPM软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-BPMN"><span class="nav-number">3.1.3.</span> <span class="nav-text">2.1.3 BPMN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 使用步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2activiti"><span class="nav-number">3.2.1.</span> <span class="nav-text">部署activiti</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B%E5%AE%9A%E4%B9%89"><span class="nav-number">3.2.2.</span> <span class="nav-text">流程定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B%E5%AE%9A%E4%B9%89%E9%83%A8%E7%BD%B2"><span class="nav-number">3.2.3.</span> <span class="nav-text">流程定义部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E4%B8%80%E4%B8%AA%E6%B5%81%E7%A8%8B%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.2.4.</span> <span class="nav-text">启动一个流程实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E6%9F%A5%E8%AF%A2%E5%BE%85%E5%8A%9E%E4%BB%BB%E5%8A%A1-Task"><span class="nav-number">3.2.5.</span> <span class="nav-text">用户查询待办任务(Task)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%8A%9E%E7%90%86%E4%BB%BB%E5%8A%A1"><span class="nav-number">3.2.6.</span> <span class="nav-text">用户办理任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B%E7%BB%93%E6%9D%9F"><span class="nav-number">3.2.7.</span> <span class="nav-text">流程结束</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81Activiti%E7%8E%AF%E5%A2%83"><span class="nav-number">4.</span> <span class="nav-text">三、Activiti环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Activiti%E7%8E%AF%E5%A2%83"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 Activiti环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-%E4%B8%8B%E8%BD%BDactiviti7"><span class="nav-number">4.2.1.</span> <span class="nav-text">3.2.1 下载activiti7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E6%B5%81%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%99%A8IDEA%E4%B8%8B%E5%AE%89%E8%A3%85"><span class="nav-number">4.2.2.</span> <span class="nav-text">3.2.2 流程设计器IDEA下安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Activiti%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E6%94%AF%E6%8C%81"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 Activiti的数据库支持</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-Activiti-%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">4.3.1.</span> <span class="nav-text">3.3.1 Activiti 支持的数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E5%9C%A8MySQL%E7%94%9F%E6%88%90%E8%A1%A8"><span class="nav-number">4.3.2.</span> <span class="nav-text">3.3.2 在MySQL生成表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-1-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">4.3.2.1.</span> <span class="nav-text">3.3.2.1 创建数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-2-%E4%BD%BF%E7%94%A8java%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E8%A1%A8"><span class="nav-number">4.3.2.2.</span> <span class="nav-text">3.3.2.2 使用java代码生成表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%EF%BC%89-%E5%88%9B%E5%BB%BA-java-%E5%B7%A5%E7%A8%8B"><span class="nav-number">4.3.2.2.1.</span> <span class="nav-text">1） 创建 java 工程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%EF%BC%89-%E5%8A%A0%E5%85%A5-maven-%E4%BE%9D%E8%B5%96%E7%9A%84%E5%9D%90%E6%A0%87%EF%BC%88jar-%E5%8C%85%EF%BC%89"><span class="nav-number">4.3.2.2.2.</span> <span class="nav-text">2） 加入 maven 依赖的坐标（jar 包）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%EF%BC%89-%E6%B7%BB%E5%8A%A0log4j%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE"><span class="nav-number">4.3.2.2.3.</span> <span class="nav-text">3） 添加log4j日志配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4%EF%BC%89-%E6%B7%BB%E5%8A%A0activiti%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">4.3.2.2.4.</span> <span class="nav-text">4） 添加activiti配置文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5%EF%BC%89-%E5%9C%A8-activiti-cfg-xml-%E4%B8%AD%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">4.3.2.2.5.</span> <span class="nav-text">5） 在 activiti.cfg.xml 中进行配置</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1%E3%80%81%E7%9B%B4%E6%8E%A5%E9%85%8D%E7%BD%AEprocessEngineConfiguration"><span class="nav-number">4.3.2.2.5.1.</span> <span class="nav-text">1、直接配置processEngineConfiguration</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E6%BA%90%E5%90%8E%EF%BC%8C%E5%9C%A8processEngineConfiguration-%E5%BC%95%E7%94%A8"><span class="nav-number">4.3.2.2.5.2.</span> <span class="nav-text">2、配置数据源后，在processEngineConfiguration 引用</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6%EF%BC%89-java%E7%B1%BB%E7%BC%96%E5%86%99%E7%A8%8B%E5%BA%8F%E7%94%9F%E6%88%90%E8%A1%A8"><span class="nav-number">4.3.2.2.6.</span> <span class="nav-text">6） java类编写程序生成表</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E8%A1%A8%E7%BB%93%E6%9E%84%E4%BB%8B%E7%BB%8D"><span class="nav-number">4.4.</span> <span class="nav-text">3.4 表结构介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-1-%E8%A1%A8%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="nav-number">4.4.1.</span> <span class="nav-text">3.4.1 表的命名规则和作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-2-Activiti%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">4.4.2.</span> <span class="nav-text">3.4.2 Activiti数据表介绍</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Activiti%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="nav-number">5.</span> <span class="nav-text">四、Activiti类关系图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E7%B1%BB%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="nav-number">5.1.</span> <span class="nav-text">4.1 类关系图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-activiti-cfg-xml"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 activiti.cfg.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E%E9%85%8D%E7%BD%AE%E7%B1%BB"><span class="nav-number">5.3.</span> <span class="nav-text">4.3 流程引擎配置类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-1-StandaloneProcessEngineConfiguration"><span class="nav-number">5.3.1.</span> <span class="nav-text">4.3.1 StandaloneProcessEngineConfiguration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-2-SpringProcessEngineConfiguration"><span class="nav-number">5.3.2.</span> <span class="nav-text">4.3.2 SpringProcessEngineConfiguration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAprocessEngineConfiguration"><span class="nav-number">5.3.3.</span> <span class="nav-text">创建processEngineConfiguration</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%BC%95%E6%93%8E%E5%88%9B%E5%BB%BA"><span class="nav-number">5.4.</span> <span class="nav-text">4.4 工作流引擎创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-1-%E9%BB%98%E8%AE%A4%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="nav-number">5.4.1.</span> <span class="nav-text">4.4.1 默认创建方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-2-%E4%B8%80%E8%88%AC%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="nav-number">5.4.2.</span> <span class="nav-text">4.4.2 一般创建方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-Servcie%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%8F%A3"><span class="nav-number">5.5.</span> <span class="nav-text">4.5 Servcie服务接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-1-Service%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="nav-number">5.5.1.</span> <span class="nav-text">4.5.1 Service创建方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-2-Service%E6%80%BB%E8%A7%88"><span class="nav-number">5.5.2.</span> <span class="nav-text">4.5.2 Service总览</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RuntimeService"><span class="nav-number">5.5.2.1.</span> <span class="nav-text">RuntimeService</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TaskService"><span class="nav-number">5.5.2.2.</span> <span class="nav-text">TaskService</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HistoryService"><span class="nav-number">5.5.2.3.</span> <span class="nav-text">HistoryService</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ManagementService"><span class="nav-number">5.5.2.4.</span> <span class="nav-text">ManagementService</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81Activiti%E5%85%A5%E9%97%A8"><span class="nav-number">6.</span> <span class="nav-text">五、Activiti入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E6%B5%81%E7%A8%8B%E7%AC%A6%E5%8F%B7"><span class="nav-number">6.1.</span> <span class="nav-text">5.1 流程符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6-Event"><span class="nav-number">6.1.1.</span> <span class="nav-text">事件 Event</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B4%BB%E5%8A%A8-Activity"><span class="nav-number">6.1.2.</span> <span class="nav-text">活动 Activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E5%85%B3-GateWay"><span class="nav-number">6.1.3.</span> <span class="nav-text">网关 GateWay</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E4%BB%96%E7%BD%91%E5%85%B3-x"><span class="nav-number">6.1.3.1.</span> <span class="nav-text">排他网关 (x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E7%BD%91%E5%85%B3"><span class="nav-number">6.1.3.2.</span> <span class="nav-text">并行网关 (+)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%85%E5%AE%B9%E7%BD%91%E5%85%B3"><span class="nav-number">6.1.3.3.</span> <span class="nav-text">包容网关 (+)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%BD%91%E5%85%B3"><span class="nav-number">6.1.3.4.</span> <span class="nav-text">事件网关 (+)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E5%90%91-Flow"><span class="nav-number">6.1.4.</span> <span class="nav-text">流向 Flow</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E6%B5%81%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%99%A8%E4%BD%BF%E7%94%A8"><span class="nav-number">6.2.</span> <span class="nav-text">5.2 流程设计器使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activiti-Designer%E4%BD%BF%E7%94%A8"><span class="nav-number">6.2.1.</span> <span class="nav-text">Activiti-Designer使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Palette%EF%BC%88%E7%94%BB%E6%9D%BF%EF%BC%89"><span class="nav-number">6.2.1.1.</span> <span class="nav-text">Palette（画板）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E6%B5%81%E7%A8%8B-IDEA%E5%B7%A5%E5%85%B7"><span class="nav-number">6.2.1.2.</span> <span class="nav-text">新建流程(IDEA工具)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B"><span class="nav-number">6.2.2.</span> <span class="nav-text">绘制流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E6%B5%81%E7%A8%8B%E5%AE%9A%E4%B9%89Key"><span class="nav-number">6.2.3.</span> <span class="nav-text">指定流程定义Key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E4%BB%BB%E5%8A%A1%E8%B4%9F%E8%B4%A3%E4%BA%BA"><span class="nav-number">6.2.4.</span> <span class="nav-text">指定任务负责人</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E6%B5%81%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="nav-number">7.</span> <span class="nav-text">六、流程操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E6%B5%81%E7%A8%8B%E5%AE%9A%E4%B9%89"><span class="nav-number">7.1.</span> <span class="nav-text">6.1 流程定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">7.1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bpmn%E6%96%87%E4%BB%B6"><span class="nav-number">7.1.2.</span> <span class="nav-text">.bpmn文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90-png%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6"><span class="nav-number">7.1.3.</span> <span class="nav-text">生成.png图片文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E4%B8%BAxml"><span class="nav-number">7.1.3.1.</span> <span class="nav-text">1、修改文件后缀为xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8designer%E8%AE%BE%E8%AE%A1%E5%99%A8%E6%89%93%E5%BC%80-xml%E6%96%87%E4%BB%B6"><span class="nav-number">7.1.3.2.</span> <span class="nav-text">2、使用designer设计器打开.xml文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81%E6%9F%A5%E7%9C%8B%E6%89%93%E5%BC%80%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">7.1.3.3.</span> <span class="nav-text">3、查看打开的文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E3%80%81%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81"><span class="nav-number">7.1.3.4.</span> <span class="nav-text">4、解决中文乱码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5%E3%80%81%E5%AF%BC%E5%87%BA%E4%B8%BA%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6"><span class="nav-number">7.1.3.5.</span> <span class="nav-text">5、导出为图片文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E6%B5%81%E7%A8%8B%E5%AE%9A%E4%B9%89%E9%83%A8%E7%BD%B2"><span class="nav-number">7.2.</span> <span class="nav-text">6.2 流程定义部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="nav-number">7.2.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F"><span class="nav-number">7.2.2.</span> <span class="nav-text">单个文件部署方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9%E5%8C%85%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F"><span class="nav-number">7.2.3.</span> <span class="nav-text">压缩包部署方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="nav-number">7.2.4.</span> <span class="nav-text">操作数据表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E5%AE%9E%E4%BE%8B"><span class="nav-number">7.3.</span> <span class="nav-text">6.3 启动流程实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-%E4%BB%BB%E5%8A%A1%E6%9F%A5%E8%AF%A2"><span class="nav-number">7.4.</span> <span class="nav-text">6.4 任务查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-%E6%B5%81%E7%A8%8B%E4%BB%BB%E5%8A%A1%E5%A4%84%E7%90%86"><span class="nav-number">7.5.</span> <span class="nav-text">6.5 流程任务处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-%E6%B5%81%E7%A8%8B%E5%AE%9A%E4%B9%89%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2"><span class="nav-number">7.6.</span> <span class="nav-text">6.6 流程定义信息查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-%E6%B5%81%E7%A8%8B%E5%88%A0%E9%99%A4"><span class="nav-number">7.7.</span> <span class="nav-text">6.7 流程删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-%E6%B5%81%E7%A8%8B%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD"><span class="nav-number">7.8.</span> <span class="nav-text">6.8 流程资源下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-%E6%B5%81%E7%A8%8B%E5%8E%86%E5%8F%B2%E4%BF%A1%E6%81%AF%E7%9A%84%E6%9F%A5%E7%9C%8B"><span class="nav-number">7.9.</span> <span class="nav-text">6.9 流程历史信息的查看</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -146,16 +187,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/18/%E6%B5%8B%E8%AF%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -168,9 +210,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/18/%E6%B5%8B%E8%AF%95/" class="post-title-link" itemprop="url">测试</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          测试
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -194,7 +236,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Activiti7"><a href="#Activiti7" class="headerlink" title="Activiti7"></a>Activiti7</h1><h1 id="一、工作流介绍"><a href="#一、工作流介绍" class="headerlink" title="一、工作流介绍"></a>一、工作流介绍</h1><h2 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h2><p>工作流(Workflow)，就是通过计算机对业务流程自动化执行管理。它主要解决的是“使在多个参与者之间按照某种预定义的规则自动进行传递文档、信息或任务的过程，从而实现某个预期的业务目标，或者促使此目标的实现”。</p>
+        <h1 id="Activiti7"><a href="#Activiti7" class="headerlink" title="Activiti7"></a>Activiti7</h1><h1 id="一、工作流介绍"><a href="#一、工作流介绍" class="headerlink" title="一、工作流介绍"></a>一、工作流介绍</h1><h2 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h2><p>工作流(Workflow)，就是通过计算机对业务流程自动化执行管理。它主要解决的是“使在多个参与者之间按照某种预定义的规则自动进行传递文档、信息或任务的过程，从而实现某个预期的业务目标，或者促使此目标的实现”。</p>
 <h2 id="1-2-工作流系统"><a href="#1-2-工作流系统" class="headerlink" title="1.2 工作流系统"></a>1.2 工作流系统</h2><p>一个软件系统中具有工作流的功能，我们把它称为工作流系统，一个系统中工作流的功能是什么？就是对系统的业务流程进行自动化管理，所以工作流是建立在业务流程的基础上，所以一个软件的系统核心根本上还是系统的业务流程，工作流只是协助进行业务流程管理。即使没有工作流业务系统也可以开发运行，只不过有了工作流可以更好的管理业务流程，提高系统的可扩展性。</p>
 <h2 id="1-3-适用行业"><a href="#1-3-适用行业" class="headerlink" title="1.3 适用行业"></a>1.3 适用行业</h2><p>消费品行业，制造业，电信服务业，银证险等金融服务业，物流服务业，物业服务业，物业管理，大中型进出口贸易公司，政府事业机构，研究院所及教育服务业等，特别是大的跨国企业和集团公司。</p>
 <h2 id="1-4-具体应用"><a href="#1-4-具体应用" class="headerlink" title="1.4 具体应用"></a>1.4 具体应用</h2><p>1、关键业务流程：订单、报价处理、合同审核、客户电话处理、供应链管理等</p>
@@ -986,7 +1028,6 @@ public class TestDemo &#123;
 <pre><code class="java">    /**     * 查看历史信息     */    @Test    public void findHistoryInfo()&#123;//      获取引擎        ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();//        获取HistoryService        HistoryService historyService = processEngine.getHistoryService();//        获取 actinst表的查询对象        HistoricActivityInstanceQuery instanceQuery = historyService.createHistoricActivityInstanceQuery();//        查询 actinst表，条件：根据 InstanceId 查询//        instanceQuery.processInstanceId(&quot;2501&quot;);//        查询 actinst表，条件：根据 DefinitionId 查询        instanceQuery.processDefinitionId(&quot;myEvection:1:4&quot;);//        增加排序操作,orderByHistoricActivityInstanceStartTime 根据开始时间排序 asc 升序        instanceQuery.orderByHistoricActivityInstanceStartTime().asc();//        查询所有内容        List&lt;HistoricActivityInstance&gt; activityInstanceList = instanceQuery.list();//        输出        for (HistoricActivityInstance hi : activityInstanceList) &#123;            System.out.println(hi.getActivityId());            System.out.println(hi.getActivityName());            System.out.println(hi.getProcessDefinitionId());            System.out.println(hi.getProcessInstanceId());            System.out.println(&quot;&lt;==========================&gt;&quot;);        &#125;    &#125;
 </code></pre>
 
-      
     </div>
 
     
@@ -994,94 +1035,22 @@ public class TestDemo &#123;
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/08/17/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/17/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/17/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-08-17 17:28:40" itemprop="dateCreated datePublished" datetime="2021-08-17T17:28:40+08:00">2021-08-17</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 1985-10-26 16:15:00" itemprop="dateModified" datetime="1985-10-26T16:15:00+08:00">1985-10-26</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
